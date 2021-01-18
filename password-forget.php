@@ -2,8 +2,7 @@
     include_once("./include/fonction_form.php"); // n'inclure qu'une fois.
     // In $post_email = isset($_POST["email"]) ? filter_inpput(INPUT_POST, 'login', FILTER_SANITIZE_SPECIAL_CHARS) : null; 
     $post_email     = isset($_POST["email"])    ? is_mail(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL, FILTER_VALIDATE_EMAIL, FILTER_SANITIZE_SPECIAL_CHARS)) : null;
-    $post_password  = isset($_POST["password"]) ? is_good_password(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_EMAIL, FILTER_VALIDATE_EMAIL, FILTER_SANITIZE_SPECIAL_CHARS)) : null;
-
+    
     $input = []; // Instancier tableau de la var $input 
     $input[] = addLayout("<h3> Password forget ? </h3>"); // Ajouter via modèle addLayout("TITLE OF PAGE");
     $input[] = addLayout("<div class=\"row\">");
@@ -15,7 +14,7 @@
 
 
     // In $show_form < crée form ("form_contact", "login.php", "post", $input);
-    $show_form = form("form_contact", "registrer.php", "post", $input);
+    $show_form = form("form_contact", "login.php", "post", $input);
 
 
 

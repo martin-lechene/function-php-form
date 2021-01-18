@@ -61,7 +61,7 @@ $input[] = addInput('Choisissez un mot-de-passe', array("type" => "password", "v
 
 $input[] = addSubmit(["value" => "OK", "name" => "submit"], "\t\t<br />\n");
 
-$show_form = form("form_contact", "form_04.php", "post", $input, "");
+$show_form = form("form_contact", "./dashboard/index.php", "post", $input, "");
 $input[] = addLayout("</div>");
 
 

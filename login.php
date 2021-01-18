@@ -15,7 +15,7 @@
 
 
     // In $show_form < crée form ("form_contact", "login.php", "post", $input);
-    $show_form = form("form_contact", "registrer.php", "post", $input);
+    $show_form = form("form_contact", "./dashboard/index.php", "post", $input);
 
 
 
